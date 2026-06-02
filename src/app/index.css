@@ -1,0 +1,136 @@
+/* Базовые настройки */
+body {
+  margin: 0;
+  font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background-color: #fffaf5; /* Легкий теплый оттенок фона */
+  color: #4a3e3d;
+  -webkit-font-smoothing: antialiased;
+}
+
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+h2 {
+  font-size: 28px;
+  color: #d35400; /* Глубокий оранжевый */
+  margin-top: 30px;
+}
+
+/* Кнопки в стиле Гав-Шоп */
+button {
+  background-color: #ff9233; /* Сочный оранжевый */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 14px;
+  font-weight: bold;
+  border-radius: 25px; /* Скругленные «игрушечные» кнопки */
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(255, 146, 51, 0.3);
+  transition: all 0.2s ease;
+}
+
+button:hover {
+  background-color: #e67e22;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 14px rgba(255, 146, 51, 0.4);
+}
+
+button:active {
+  transform: translateY(1px);
+}
+
+/* Сетка карточек */
+.product-card {
+  background: #ffffff;
+  border-radius: 16px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 6px 18px rgba(211, 84, 0, 0.06);
+  border: 1px solid #ffe6d5;
+}
+
+.product-card__image-container {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  background-color: #ffe6d5;
+}
+
+.product-card__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.product-card:hover .product-card__image {
+  transform: scale(1.05);
+}
+
+.product-card__content {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.product-card h3 {
+  margin: 0 0 10px 0;
+  font-size: 19px;
+  color: #2c3e50;
+}
+
+.product-card__description {
+  font-size: 14px;
+  color: #7f8c8d;
+  line-height: 1.5;
+  margin: 0 0 20px 0;
+  flex-grow: 1;
+}
+
+.product-card__footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.product-card__price {
+  font-size: 20px;
+  font-weight: bold;
+  color: #e67e22;
+}
+
+/* Кастомный стиль для шапки виджета */
+header {
+  background: linear-gradient(135deg, #ff9233 0%, #d35400 100%) !important;
+  box-shadow: 0 4px 15px rgba(211, 84, 0, 0.2);
+}
+
+/* Дефолтная кнопка (например, "Купить") */
+button {
+  background-color: #ff9233;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 14px;
+  font-weight: bold;
+  border-radius: 25px;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(255, 146, 51, 0.3);
+  transition: all 0.2s ease;
+}
+
+/* Специфичные стили для кнопок фильтрации, чтобы hover не ломал цвет текста */
+div[style*="flex"] button {
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+div[style*="flex"] button:hover {
+  background-color: #ffe6d5;
+  color: #d35400;
+}
